@@ -21,7 +21,7 @@ MAIL_USERNAME = None
 MAIL_PASSWORD = None
 
 # Administrator list
-ADMINS = ['test@example.com']
+ADMINS = ['graham.clendenning@uoit.net']
 
 # Pagination
 POSTS_PER_PAGE = 3

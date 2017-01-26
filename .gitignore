@@ -1,2 +1,5 @@
 tmp/**
 *.pyc
+*.mo
+app.db
+search.db

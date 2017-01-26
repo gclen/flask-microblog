@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import os
 
 WTF_CSRF_ENABLED = True
@@ -30,5 +31,9 @@ POSTS_PER_PAGE = 3
 WHOOSH_BASE = os.path.join(basedir, 'search.db')
 MAX_SEARCH_RESULTS = 50
 
-
+# Available languages
+LANGUAGES = {
+    'en': 'English',
+    'es': 'Español'
+}
 

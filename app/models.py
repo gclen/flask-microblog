@@ -1,4 +1,5 @@
 import sys
+import re
 from app import db, app
 from hashlib import md5
 
@@ -77,6 +78,9 @@ class User(db.Model):
     def followed_posts(self):
         return Post.query.join(followers, (followers.c.followed_id == Post.user_id)).filter(followers.c.followed_id == self.id).order_by(Post.timestamp.desc())
 
+    @staticmethod
+    def make_valid_nickname(nickname):
+        return re.sub('[^a-zA-Z0-9_\.]', '', nickname)
 
     def __repr__(self):
         return '<User %r>' % (self.nickname)
